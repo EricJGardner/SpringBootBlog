@@ -1,15 +1,45 @@
 <!DOCTYPE html>
-<html xmlns:th="http.www.thymeleaf.org" lang="en">
+<!--The index template will feature a form that our users will fill
+out to "subscribe" to our site.  The information they input will be stored
+in our database.  This is where Thymeleaf will help, by storing their
+input as variables.  To start, modify the "index" by declaring a
+namespace for the  Thymeleaf "th:*" attribute.-->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Blog Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 </head>
 <body>
 
     <h1>Welcome to our blog post site!</h1>
     <h3>Check out our blogs!</h3>
 
+<!--    The form will bring in the title, author and blog entry of the blog post.
+ The form is set up like an HTML form.  In addition to the HTML tags, we have
+ included the "th:"  attribute in the tags to make the connection between our database tables-->
+<form action="#" th:action="@{/}" th:object="${blogPost}" method="post">
+    <table>
+        <tr>
+            <td>Title</td>
+            <td><input type="text" th:field="*{title}"/></td>
+        </tr>
+        <tr>
+            <td>Author</td>
+            <td><input type="text" th:field="*{author}"/></td>
+        </tr>
+        <tr>
+            <td>Blog Entry</td>
+            <td><input type="text" th:field="*{blogEntry}"/></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Submit your post</button>
+            </td>
+        </tr>
+    </table>
 
+</form>
 
 </body>
 </html>

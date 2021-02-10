@@ -20,7 +20,7 @@ public class BlogPost {
     private String blogEntry;
 
     public BlogPost (String title, String author, String blogEntry) {
-        this. title = title;
+        this.title = title;
         this.author = author;
         this.blogEntry = blogEntry;
     }

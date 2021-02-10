@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--We create a name space for Thymeleaf and write the content
+that will output the form input fields.-->
+    <h3>Blog Post Form</h3>
+    <p>Thank you for your submission!</p>
+    <h4>Blog post: </h4>
+    <p th:text="${title}" />
+    <p th:text="${author}" />
+    <p th:text="${blogEntry}" />
+
+</body>
+</html>
