@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
 <!--We create a name space for Thymeleaf and write the content
 that will output the form input fields.-->
     <h3>Blog Post Form</h3>
@@ -14,8 +15,8 @@ that will output the form input fields.-->
     <p th:text="${title}" />
     <p th:text="${author}" />
     <p th:text="${blogEntry}" />
-<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-
+</div>
 </body>
 </html>
