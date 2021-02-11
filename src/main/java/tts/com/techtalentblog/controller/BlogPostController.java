@@ -20,11 +20,12 @@ public class BlogPostController {
     @Autowired
     private BlogPostRepository blogPostRepository;
 
+
     //below is a constructor based dependency injection
     //if you only have one dependency, this is considered best practice
-    public BlogPostController(BlogPostRepository blogPostRepository) {
-        this.blogPostRepository = blogPostRepository;
-    }
+//    public BlogPostController(BlogPostRepository blogPostRepository) {
+//        this.blogPostRepository = blogPostRepository;
+//    }
 
 //    This annotation will be used for our index method, which
 //    will return the template specified - a template called "index"
