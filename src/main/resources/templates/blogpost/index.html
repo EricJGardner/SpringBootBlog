@@ -12,33 +12,57 @@ namespace for the  Thymeleaf "th:*" attribute.-->
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to our blog post site!</h1>
-    <h3>Check out our blogs!</h3>
+    <h1>Welcome to Our Blog Post Site!</h1>
 
-    <h3>Blog Post Form</h3>
-    <p>Thank you for your submission!</p>
-
-    <h4>Blog Post:</h4>
     <div class="row">
         <div th:each="blog:${posts}">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <p th:text="${blog.title}"/>
+                        <h2 th:text="${blog.title}"></h2>
                     </div>
                     <div class="panel-body">
-                        <p th:text="${blog.author}"/>
+                        <strong><p th:text="${blog.author}"/></strong>
                         <p th:text="${blog.blogEntry}" />
                     </div>
                     <div class="panel-footer">
                         <!-- Link to Update -->
                         <!-- Link to Show  -->
                         <!--  Link to Destroy -->
+<!--                        Buttons-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!--<div class="container">-->
+<!--    <h1>Welcome to our blog post site!</h1>-->
+<!--    <h3>Check out our blogs!</h3>-->
+
+<!--    <h3>Blog Post Form</h3>-->
+<!--    <p>Thank you for your submission!</p>-->
+
+<!--    <h4>Blog Post:</h4>-->
+<!--    <div class="row">-->
+<!--        <div th:each="blog:${posts}">-->
+<!--            <div class="col-md-6">-->
+<!--                <div class="panel panel-default">-->
+<!--                    <div class="panel-heading">-->
+<!--                        <p th:text="${blog.title}"/>-->
+<!--                    </div>-->
+<!--                    <div class="panel-body">-->
+<!--                        <p th:text="${blog.author}"/>-->
+<!--                        <p th:text="${blog.blogEntry}" />-->
+<!--                    </div>-->
+<!--                    <div class="panel-footer">-->
+<!--                        &lt;!&ndash; Link to Update &ndash;&gt;-->
+<!--                        &lt;!&ndash; Link to Show  &ndash;&gt;-->
+<!--                        &lt;!&ndash;  Link to Destroy &ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 <!--    The form will bring in the title, author and blog entry of the blog post.
  The form is set up like an HTML form.  In addition to the HTML tags, we have
@@ -69,8 +93,9 @@ namespace for the  Thymeleaf "th:*" attribute.-->
         <button class= "btn btn-primary">Submit a New Blog Post</button>
     </a>
     <a th:href="@{/}"><button class="btn btn-success">Back To Home Page</button></a>
+</div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-</div>
+
 </body>
 </html>
