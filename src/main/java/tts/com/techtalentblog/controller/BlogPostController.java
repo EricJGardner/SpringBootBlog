@@ -3,8 +3,7 @@ package tts.com.techtalentblog.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import tts.com.techtalentblog.model.BlogPost;
 import tts.com.techtalentblog.repo.BlogPostRepository;
 
@@ -69,6 +68,14 @@ public class BlogPostController {
         model.addAttribute("author", blogPost.getAuthor());
         model.addAttribute("blogEntry", blogPost.getBlogEntry());
         return "blogpost/result";
+    }
+    //function to delete a post
+    @RequestMapping(value = "/blogposts/{id}", method = RequestMethod.DELETE)
+    public String deletePostWithId(@PathVariable Long id, BlogPost blogPost) {
+
+        blogPostRepository.deleteById(id);
+        return "blogpost/index";
+
     }
 
 }
